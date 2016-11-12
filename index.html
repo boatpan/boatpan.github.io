@@ -233,6 +233,99 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/11/Js-Tips/" itemprop="url">
+                  Js_Tips
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-11T19:20:44+08:00" content="2016-11-11">
+              2016-11-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="js进行deepCopy"><a href="#js进行deepCopy" class="headerlink" title="js进行deepCopy"></a>js进行deepCopy</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#递归</span></div><div class="line">deepCopy = <span class="keyword">function</span>(input) &#123;</div><div class="line">    <span class="keyword">if</span> (input == null</div><div class="line">        || typeof input != <span class="string">"object"</span></div><div class="line">        || (input.constructor != Object &amp;&amp; input.constructor != Array)</div><div class="line">    ) &#123;</div><div class="line">        <span class="built_in">return</span> input;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (</div><div class="line">        input.constructor == Boolean</div><div class="line">        || input.constructor == Date</div><div class="line">        || input.constructor == Function</div><div class="line">        || input.constructor == Number</div><div class="line">        || input.constructor == RegExp</div><div class="line">        || input.constructor == String</div><div class="line">    ) &#123;</div><div class="line">        <span class="built_in">return</span> new input.constructor(input);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (input instanceof Array) &#123;</div><div class="line">        var copy = [];</div><div class="line">        <span class="keyword">for</span> (var i = 0, len = input.length; i &lt; len; i++) &#123;</div><div class="line">            copy[i] = deepCopy(input[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">return</span> copy;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (input instanceof Object) &#123;</div><div class="line">        var copy = &#123;&#125;;</div><div class="line">        <span class="keyword">for</span> (var key <span class="keyword">in</span> input) &#123;</div><div class="line">            <span class="keyword">if</span> (input.hasOwnProperty(key)) &#123;</div><div class="line">                copy[key] = deepCopy(input[key]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">return</span> copy;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> null;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">#JSON对象</span></div><div class="line">JSON.parse(JSON.stringify(obj));</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/11/Git命令清单/" itemprop="url">
                   Git命令清单
                 </a>
@@ -462,7 +555,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
